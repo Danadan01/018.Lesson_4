@@ -9,7 +9,7 @@ function generateList(numArray) {
   for (let i = 0; i < numArray.length; i++) {
     const li = document.createElement("li");
     ul.appendChild(li);
-    if (typeof(numArray[i]) === "object") {
+    if (Array.isArray(numArray[i])) {
       const innerUl = document.createElement("ul");
       li.appendChild(innerUl);
       li.classList.add("marker");
